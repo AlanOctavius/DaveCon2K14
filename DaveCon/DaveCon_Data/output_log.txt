@@ -15,3 +15,241 @@ Loading C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
+Setting default values for PlayerPrefs
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting default width to value 0.6
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting default height to value 0.6
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting default ServerName to DaveCon Server
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting default connectionPort to value 25001
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting default playerHardcap to 8
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting default maxPlayers to value 4
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Setting RegisteredGameName to value SC_DaveCon_Network_Test_Server
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Defaults set
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+A key or mouse click has been detected, loading Main Menu
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.213037 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 100.
+Total: 0.677793 ms (FindLiveObjects: 0.007679 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.084759 ms  DeleteObjects: 0.002559 ms)
+
+Multiplayer Button Pressed, loading MultiplayerMenu
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.160702 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 106.
+Total: 0.651626 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007110 ms MarkObjects: 0.081062 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.147618 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.640817 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.080208 ms  DeleteObjects: 0.001991 ms)
+
+Create Server Button Pressed from Create Server Menu, Creating server
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Server Name DaveCon Server
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+connectionPort 25001
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Max Players 4
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Initialising Server
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Server Created
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.153591 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 119.
+Total: 0.658167 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007110 ms MarkObjects: 0.098981 ms  DeleteObjects: 0.002275 ms)
+
+Disconnected from server: Disconnected
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.158426 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.668407 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.105238 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.138516 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 101.
+Total: 0.668691 ms (FindLiveObjects: 0.003697 ms CreateObjectMapping: 0.007110 ms MarkObjects: 0.098127 ms  DeleteObjects: 0.001991 ms)
+
+Multiplayer Button Pressed, loading MultiplayerMenu
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.142783 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 106.
+Total: 0.665563 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.104669 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.158711 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.664709 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.106945 ms  DeleteObjects: 0.001991 ms)
+
+Refresh Server List Button Clciked
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Refreshing ... 
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.150747 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 109.
+Total: 0.667838 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.114909 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.143352 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 103.
+Total: 0.678077 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.118037 ms  DeleteObjects: 0.001991 ms)
+
+Multiplayer Button Pressed, loading MultiplayerMenu
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.149609 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 106.
+Total: 0.686895 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.127424 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.155866 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.705383 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.008248 ms MarkObjects: 0.126855 ms  DeleteObjects: 0.001991 ms)
+
+Refresh Server List Button Clciked
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Refreshing ... 
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.156720 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 109.
+Total: 0.709080 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.135388 ms  DeleteObjects: 0.002275 ms)
+
+Disconnected from server: Disconnected
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.150462 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.693152 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.138801 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.120313 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 101.
+Total: 0.681775 ms (FindLiveObjects: 0.003697 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.119744 ms  DeleteObjects: 0.001706 ms)
+
+Multiplayer Button Pressed, loading MultiplayerMenu
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.151600 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 106.
+Total: 0.699694 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.140507 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.146765 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.699125 ms (FindLiveObjects: 0.003697 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.143067 ms  DeleteObjects: 0.001991 ms)
+
+Refresh Server List Button Clciked
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Refreshing ... 
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.156151 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 109.
+Total: 0.709080 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007964 ms MarkObjects: 0.152738 ms  DeleteObjects: 0.001991 ms)
+
+The server has disconnected from the client. Most likely the server has shut down.
+ 
+(Filename:  Line: 740)
+
+Disconnected from server: Disconnected
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.158426 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 105.
+Total: 0.719035 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.157289 ms  DeleteObjects: 0.002275 ms)
+
+Quit button pressed from main menu, Application shutting down.
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
