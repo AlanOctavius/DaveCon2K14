@@ -139,7 +139,6 @@ public class ChatWindow : MonoBehaviour {
 			chatEntries.RemoveAt (0);
 		}
 		scrollPosition.y = 1000000;
-		inputField = "";
 		
 	}
 	
@@ -200,6 +199,7 @@ public class ChatWindow : MonoBehaviour {
 		if(Event.current.type == EventType.keyDown && Event.current.character == '\n' & inputField.Length > 0)
 		{
 			HitEnter(inputField);
+			inputField = "";
 		}
 		GUI.SetNextControlName ("Chat input field");
 		inputField = GUILayout.TextField (inputField);

@@ -1,16 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ChatWindow.cs">
     <Files>
-      <File FileName="Assets\Scripts\ChatWindow.cs" Line="43" Column="4" />
-      <File FileName="Assets\Scripts\GameLobby.cs" Line="26" Column="52" />
-      <File FileName="Assets\Scripts\StartPage.cs" Line="18" Column="2" />
-      <File FileName="Assets\Scripts\MainMenu.cs" Line="19" Column="53" />
-      <File FileName="Assets\Scripts\MultiplayerMenu.cs" Line="54" Column="36" />
-      <File FileName="Assets\Scripts\CreateServerMenu.cs" Line="109" Column="46" />
-      <File FileName="Assets\Scripts\SetDefaults.cs" Line="44" Column="37" />
-      <File FileName="Assets\Scripts\ServerBrowser.cs" Line="40" Column="4" />
-      <File FileName="Assets\Scripts\SettingsMenu.cs" Line="31" Column="27" />
+      <File FileName="Assets\Scripts\ServerBrowser.cs" Line="127" Column="2" />
+      <File FileName="Assets\Scripts\ChatWindow.cs" Line="220" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
