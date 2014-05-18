@@ -11,7 +11,8 @@ public class ServerBrowser : MonoBehaviour {
 	private bool isRefreshing = false;
 	private float refreshRequestLength = 3.0f;
 	HostData[] hostData;
-
+	private string directIP = "127.0.0.1";
+	private string directPort= "25001";
 	private string registeredGameName = "SC_DaveCon_Network_Test_Server";
 	private Vector2 scrollPosition;
 	// Use this for initialization
@@ -66,6 +67,19 @@ public class ServerBrowser : MonoBehaviour {
 					Debug.Log("Refresh Server List Button Clciked");
 					StartCoroutine("RefreshHostList");
 				}
+				GUILayout.BeginHorizontal(); // also can put width in here
+				{
+					GUILayout.Label("Direct Connect: ");
+					directIP = GUILayout.TextArea(directIP);
+					directPort = GUILayout.TextArea(directPort);
+					if(GUILayout.Button("Join"))
+					{
+						Network.Connect(directIP,int.Parse(directPort));
+						Application.LoadLevel("GameLobby");
+					}
+					
+				}
+				GUILayout.EndHorizontal();
 				if (GUILayout.Button("Back")) // also can put width here
 				{
 					Debug.Log("Back button pressed from Server Browser, Loading Multiplayer Menu.");
@@ -99,6 +113,8 @@ public class ServerBrowser : MonoBehaviour {
 								}
 							}
 							GUILayout.EndHorizontal();
+					
+
 						}
 					}
 					GUILayout.EndVertical();

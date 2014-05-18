@@ -135,7 +135,7 @@ public class ChatWindow : MonoBehaviour {
 		entry.text = msg;
 		
 		chatEntries.Add (entry);
-		if (chatEntries.Count > 4) {
+		if (chatEntries.Count > 10) {
 			chatEntries.RemoveAt (0);
 		}
 		scrollPosition.y = 1000000;
