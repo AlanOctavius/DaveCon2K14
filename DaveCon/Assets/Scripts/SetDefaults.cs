@@ -13,8 +13,9 @@ public class SetDefaults : MonoBehaviour {
 	public string maxPlayers = "4";
 
 	public string registeredGameName = "SC_DaveCon_Network_Test_Server";
-
 	public string connectionIP;
+
+	public string playerName = "Player 1";
 
 	// Use this for initialization
 	void Awake ()
@@ -39,6 +40,8 @@ public class SetDefaults : MonoBehaviour {
 		PlayerPrefs.SetString ("defaultMaxPlayers", maxPlayers);
 		Debug.Log ("Setting RegisteredGameName to value " + registeredGameName);
 		PlayerPrefs.SetString ("registeredGameName", registeredGameName);
+
+		PlayerPrefs.SetString ("PlayerName", playerName);
 
 		Debug.Log ("Defaults set");
 	}

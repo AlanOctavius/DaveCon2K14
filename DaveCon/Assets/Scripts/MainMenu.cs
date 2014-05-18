@@ -8,12 +8,15 @@ public class MainMenu : MonoBehaviour {
 	
 	private Rect rect;
 
+	private string playerName = "Player 1";
+
 	void Start()
 	{
 		//Check if defaults exsits if not create them if no set them
 		//Debug.Log ("Calling CheckPrefs");
 		w = PlayerPrefs.GetFloat ("defaultWidth");
 		h = PlayerPrefs.GetFloat ("defaultHeight");
+		playerName = PlayerPrefs.GetString ("PlayerName");
 	}
 
 	//GUIStyle style;
@@ -31,6 +34,17 @@ public class MainMenu : MonoBehaviour {
 		{
 			GUILayout.BeginVertical(); // also can put width in here
 			{
+				GUILayout.BeginHorizontal();
+				{
+					GUILayout.Label("Name: ");
+					playerName = GUILayout.TextField(playerName,16);
+					if(GUILayout.Button("Set"))
+					{
+						PlayerPrefs.SetString("PlayerName",playerName);
+					}
+				}
+				GUILayout.EndHorizontal();
+
 				if (GUILayout.Button("Multiplayer")) // also can put width here
 				{
 					Debug.Log("Multiplayer Button Pressed, loading MultiplayerMenu");
