@@ -34,9 +34,5 @@ public class NetworkContrller : MonoBehaviour {
 			Network.SetSendingEnabled (0, true);
 		}
 	}
-//	[RPC]
-//	void SendString(string msg)
-//	{
-//		Next = msg;
-//	}
+
 }

@@ -41,7 +41,7 @@ public class SetDefaults : MonoBehaviour {
 		Debug.Log ("Setting RegisteredGameName to value " + registeredGameName);
 		PlayerPrefs.SetString ("registeredGameName", registeredGameName);
 
-		PlayerPrefs.SetString ("PlayerName", playerName);
+		//PlayerPrefs.SetString ("PlayerName", playerName);
 
 		Debug.Log ("Defaults set");
 	}

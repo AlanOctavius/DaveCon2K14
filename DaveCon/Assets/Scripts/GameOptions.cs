@@ -96,7 +96,8 @@ public class GameOptions : MonoBehaviour {
 	[RPC]
 	void SendString(string msg)
 	{
-		Debug.Log ("Sending Message " + LevelToLoad);
+		Debug.Log ("Sending Message " + msg);
 		Next = msg;
 	}
+	
 }

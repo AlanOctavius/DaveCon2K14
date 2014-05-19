@@ -16,7 +16,7 @@ public class ServerBrowser : MonoBehaviour {
 	private string registeredGameName = "SC_DaveCon_Network_Test_Server";
 	private Vector2 scrollPosition;
 	// Use this for initialization
-
+	private int  playerCount;
 	string levelToLoad = "";
 
 	void Start () {
@@ -88,42 +88,36 @@ public class ServerBrowser : MonoBehaviour {
 					Debug.Log("Back button pressed from Server Browser, Loading Multiplayer Menu.");
 					Application.LoadLevel("MuliplayerMenu");
 				}
-				
+
+				GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(rect.width), GUILayout.Height(rect.height));
+				{
+					if(hostData != null)
+					{
+						GUILayout.BeginVertical();
+						{
+							for (int i = 0; i < hostData.Length; i++)
+							{
+								GUILayout.BeginHorizontal(); // also can put width in here
+								{
+									GUILayout.Label(hostData[i].gameName);
+									GUILayout.Label("players " + hostData[i].connectedPlayers + "/" + hostData[i].playerLimit);
+									if(GUILayout.Button("Join"))
+									{
+										//ConnectToServer(hostData[i].ip.ToString, hostData[i].port);
+										ConnectToServer(hostData[i]);
+									}
+								}
+								GUILayout.EndHorizontal();
+						
+
+							}
+						}
+						GUILayout.EndVertical();
+					}
+				}
+				GUILayout.EndScrollView ();
 			}
 			GUILayout.EndVertical();
-		}
-		GUILayout.EndArea();
-
-		rect.y = (3*Screen.height*(1-h))/4;
-		GUILayout.BeginArea (rect);
-		{
-			GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(rect.width), GUILayout.Height(rect.height));
-			{
-				if(hostData != null)
-				{
-					GUILayout.BeginVertical();
-					{
-						for (int i = 0; i < hostData.Length; i++)
-						{
-							GUILayout.BeginHorizontal(); // also can put width in here
-							{
-								GUILayout.Label(hostData[i].gameName);
-								GUILayout.Label("players " + hostData[i].connectedPlayers);
-								if(GUILayout.Button("Join"))
-								{
-									//ConnectToServer(hostData[i].ip.ToString, hostData[i].port);
-									ConnectToServer(hostData[i]);
-								}
-							}
-							GUILayout.EndHorizontal();
-					
-
-						}
-					}
-					GUILayout.EndVertical();
-				}
-			}
-			GUILayout.EndScrollView ();
 		}
 		GUILayout.EndArea ();
 	}
@@ -158,5 +152,11 @@ public class ServerBrowser : MonoBehaviour {
 		}
 	}
 
+	[RPC]
+	void PassPlayerCount(int players)
+	{
+		
+		playerCount = players;
+	}
 
 }

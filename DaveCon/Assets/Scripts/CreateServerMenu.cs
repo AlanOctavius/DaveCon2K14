@@ -111,7 +111,7 @@ public class CreateServerMenu : MonoBehaviour {
 						Debug.Log("Max Players " + maxPlayers);
 
 						Debug.Log ("Initialising Server");
-						Network.InitializeServer (int.Parse(maxPlayers),int.Parse(connectionPort), Nats);
+						Network.InitializeServer (int.Parse(maxPlayers)-1,int.Parse(connectionPort), Nats);
 						MasterServer.RegisterHost (registeredGameName, ServerName, serverDescript);
 						Debug.Log("Server Created");
 
