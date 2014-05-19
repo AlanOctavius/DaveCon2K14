@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour {
 	{
 		//Check if defaults exsits if not create them if no set them
 		//Debug.Log ("Calling CheckPrefs");
+		Application.targetFrameRate = -1;
 		w = PlayerPrefs.GetFloat ("defaultWidth");
 		h = PlayerPrefs.GetFloat ("defaultHeight");
 		playerName = PlayerPrefs.GetString ("PlayerName");

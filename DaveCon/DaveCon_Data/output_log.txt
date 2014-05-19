@@ -11,7 +11,7 @@ Platform assembly: C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Da
 Loading C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.043 seconds
+- Completed reload, in  0.040 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -55,29 +55,51 @@ A key or mouse click has been detected, loading Main Menu
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 0.211330 ms
+UnloadTime: 0.172079 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 106.
-Total: 0.429202 ms (FindLiveObjects: 0.007110 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.086466 ms  DeleteObjects: 0.002844 ms)
+Total: 0.399906 ms (FindLiveObjects: 0.004835 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.079071 ms  DeleteObjects: 0.002559 ms)
 
-UnloadTime: 0.224698 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 116.
-Total: 0.426643 ms (FindLiveObjects: 0.004835 ms CreateObjectMapping: 0.008532 ms MarkObjects: 0.103247 ms  DeleteObjects: 0.002275 ms)
-
-Quit button pressed from main menu, Application shutting down.
+Multiplayer Button Pressed, loading MultiplayerMenu
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 0.171794 ms
+UnloadTime: 0.178052 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 116.
+Total: 0.407586 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.088457 ms  DeleteObjects: 0.001991 ms)
+
+UnloadTime: 0.175776 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 120.
-Total: 0.413274 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.105238 ms  DeleteObjects: 0.002275 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 112.
+Total: 0.400191 ms (FindLiveObjects: 0.003982 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.090163 ms  DeleteObjects: 0.001991 ms)
 
-Quit button pressed from main menu, Application shutting down.
+Connecting to server: 127.0.0.1:25001
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Retriving Server Info
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+LevelToLoad: GameLobby
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.169235 ms
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 121.
+Total: 0.415550 ms (FindLiveObjects: 0.004550 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.101256 ms  DeleteObjects: 0.002275 ms)
+
+Disconnected from server: Disconnected
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+Disconnected from server: Disconnected
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
