@@ -62,6 +62,8 @@ public class GameLobby : MonoBehaviour {
 					//Stats for player
 					GUILayout.Label("Ping: "+ Network.GetAveragePing(Network.connections[0]) + " ms");
 				}
+
+				GUILayout.Label("Current Scene: " + Application.loadedLevelName);
 				if (GUILayout.Button("Disconnect")) // also can put width here
 				{
 					Network.Disconnect();

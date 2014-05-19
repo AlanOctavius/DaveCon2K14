@@ -16,6 +16,9 @@ public class ServerBrowser : MonoBehaviour {
 	private string registeredGameName = "SC_DaveCon_Network_Test_Server";
 	private Vector2 scrollPosition;
 	// Use this for initialization
+
+	string levelToLoad = "";
+
 	void Start () {
 		w = PlayerPrefs.GetFloat ("defaultWidth");
 		h = PlayerPrefs.GetFloat ("defaultHeight");
@@ -74,8 +77,8 @@ public class ServerBrowser : MonoBehaviour {
 					directPort = GUILayout.TextArea(directPort);
 					if(GUILayout.Button("Join"))
 					{
-						Network.Connect(directIP,int.Parse(directPort));
-						Application.LoadLevel("GameLobby");
+						ConnectToServer(directIP,int.Parse(directPort));
+						//Application.LoadLevel("GameLobby");
 					}
 					
 				}
@@ -108,8 +111,8 @@ public class ServerBrowser : MonoBehaviour {
 								GUILayout.Label("players " + hostData[i].connectedPlayers);
 								if(GUILayout.Button("Join"))
 								{
-									Network.Connect(hostData[i]);
-									Application.LoadLevel("GameLobby");
+									//ConnectToServer(hostData[i].ip.ToString, hostData[i].port);
+									ConnectToServer(hostData[i]);
 								}
 							}
 							GUILayout.EndHorizontal();
@@ -124,4 +127,36 @@ public class ServerBrowser : MonoBehaviour {
 		}
 		GUILayout.EndArea ();
 	}
+
+
+	void ConnectToServer(string IP, int Port)
+	{
+		Debug.Log("Connecting to server: " + IP + ":" + Port);
+		Network.Connect(IP,Port);
+	}
+	void ConnectToServer(HostData hostData)
+	{
+		//Debug.Log("Connecting to server: " + IP + ":" + Port);
+		Network.Connect(hostData);
+	}
+
+	
+	
+	[RPC]
+	void sendLevel(string level)
+	{
+		Debug.Log ("Retriving Server Info");
+		levelToLoad = level;
+		Debug.Log ("LevelToLoad: " + levelToLoad);
+		if(Network.isClient)
+		{
+			Network.SetSendingEnabled(0, false);	
+			Network.isMessageQueueRunning = false;
+			Application.LoadLevel (levelToLoad);
+			Network.isMessageQueueRunning = true;
+			Network.SetSendingEnabled (0, true);
+		}
+	}
+
+
 }
