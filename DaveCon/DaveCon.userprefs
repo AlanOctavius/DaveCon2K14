@@ -1,17 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameOverlay.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameOverlay.cs" Line="52" Column="35" />
-      <File FileName="Assets\Scripts\ServerBrowser.cs" Line="19" Column="27" />
-      <File FileName="Assets\Scripts\SettingsMenu.cs" Line="35" Column="38" />
-      <File FileName="Assets\Scripts\SetDefaults.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenu.cs" Line="16" Column="36" />
-      <File FileName="Assets\Scripts\GameLobby.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameOptions.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CreateServerMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Credits.cs" Line="37" Column="61" />
-      <File FileName="Assets\Scripts\ChatWindow.cs" Line="68" Column="3" />
+      <File FileName="Assets\Scripts\GameOverlay.cs" Line="60" Column="6" />
+      <File FileName="Assets\Scripts\ChatWindow.cs" Line="209" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

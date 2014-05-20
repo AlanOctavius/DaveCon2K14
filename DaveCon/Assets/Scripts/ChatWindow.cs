@@ -76,7 +76,7 @@ public class ChatWindow : MonoBehaviour {
 	}
 
 	void OnPlayerDisconnected(NetworkPlayer player) {
-		addGameChatMessage ("A player has disconnected");
+		addGameChatMessage (" A player has disconnected");
 		playerList.Remove (GetPlayerNode(player));
 		Network.RemoveRPCs(player);
 		Network.DestroyPlayerObjects(player);
@@ -189,7 +189,7 @@ public class ChatWindow : MonoBehaviour {
 					}
 					else
 					{
-						GUILayout.Label(entry.name + ":" + entry.text);
+						GUILayout.Label(entry.name + ": " + entry.text);
 					}
 
 				}
