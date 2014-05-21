@@ -28,6 +28,7 @@ public class NetworkStuff : MonoBehaviour {
 			if(GUILayout.Button("kill"))
 			{
 				KillPlayer(myTransform);
+				Alive = false;
 
 			}
 		}
