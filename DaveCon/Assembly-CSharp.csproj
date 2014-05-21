@@ -39,16 +39,17 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Dev/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>T:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Dev/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>T:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ChatWindow.cs" />
      <Compile Include="Assets\Scripts\CreateServerMenu.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GameLobby.cs" />
      <Compile Include="Assets\Scripts\GameOptions.cs" />
      <Compile Include="Assets\Scripts\GameOverlay.cs" />
@@ -56,6 +57,8 @@
      <Compile Include="Assets\Scripts\MultiplayerMenu.cs" />
      <Compile Include="Assets\Scripts\NetworkContrller.cs" />
      <Compile Include="Assets\Scripts\NetworkStuff.cs" />
+     <Compile Include="Assets\Scripts\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\PlayerControlMeta.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ServerBrowser.cs" />
      <Compile Include="Assets\Scripts\SetDefaults.cs" />

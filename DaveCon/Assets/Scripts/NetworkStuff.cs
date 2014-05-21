@@ -28,7 +28,7 @@ public class NetworkStuff : MonoBehaviour {
 			if(GUILayout.Button("kill"))
 			{
 				KillPlayer(myTransform);
-				//Alive = false;
+
 			}
 		}
 	}
@@ -38,6 +38,7 @@ public class NetworkStuff : MonoBehaviour {
 	{
 		Transform mt;
 		mt = (Transform)Network.Instantiate(cubePrefab, transform.position, transform.rotation, 0);
+		myTransform = mt;
 
 	}
 
@@ -56,7 +57,7 @@ public class NetworkStuff : MonoBehaviour {
 
 	void KillPlayer(Transform mt)
 	{
-		//Network.Destroy (mt.GetComponent(NetworkViewID));
+		myTransform.gameObject.GetComponent<PlayerController> ().Destroy ();
 	}
 
 
