@@ -7,7 +7,7 @@
       <File FileName="..\..\..\Tester\Assets\Scripts\GameManager.cs" Line="18" Column="2" />
       <File FileName="Assets\Scripts\PlayerController.cs" Line="71" Column="40" />
       <File FileName="Assets\Scripts\GameOverlay.cs" Line="111" Column="3" />
-      <File FileName="Assets\Scripts\NetworkStuff.cs" Line="52" Column="3" />
+      <File FileName="Assets\Scripts\NetworkStuff.cs" Line="39" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
