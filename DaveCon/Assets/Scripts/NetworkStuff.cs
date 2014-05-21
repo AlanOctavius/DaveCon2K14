@@ -8,12 +8,12 @@ public class NetworkStuff : MonoBehaviour {
 	private bool Alive = false;
 
 
-	void Start()
+	public void Start()
 	{
 		Network.sendRate = 30;
 	}
 
-	void OnGUI()
+	public void OnGUI()
 	{
 		if(Alive == false)
 		{
@@ -34,7 +34,7 @@ public class NetworkStuff : MonoBehaviour {
 	}
 
 
-	void SpawnPlayer()
+	public void SpawnPlayer()
 	{
 		Transform mt;
 		mt = (Transform)Network.Instantiate(cubePrefab, transform.position, transform.rotation, 0);
@@ -55,7 +55,7 @@ public class NetworkStuff : MonoBehaviour {
 	}
 	*/
 
-	void KillPlayer(Transform mt)
+	public void KillPlayer(Transform mt)
 	{
 		myTransform.gameObject.GetComponent<PlayerController> ().Destroy ();
 	}

@@ -30,7 +30,7 @@ public class ChatWindow : MonoBehaviour {
 	}
 
 
-	void Start()
+	public void Start()
 	{
 		window = new Rect (width/2,Screen.height/2 + height/2, width, height);
 
@@ -48,7 +48,7 @@ public class ChatWindow : MonoBehaviour {
 
 
 
-	void OnGUI()
+	public void OnGUI()
 	{
 		if (!showChat)
 		{
@@ -69,20 +69,20 @@ public class ChatWindow : MonoBehaviour {
 
 	}
 
-	void OnDisconnectedFromServer(NetworkDisconnection info) {
+	public void OnDisconnectedFromServer(NetworkDisconnection info) {
 		CloseChatWindow ();
 		Debug.Log("Disconnected from server: " + info);
 		Application.LoadLevel ("MainMEnu");
 	}
 
-	void OnPlayerDisconnected(NetworkPlayer player) {
+	public void OnPlayerDisconnected(NetworkPlayer player) {
 		addGameChatMessage (" A player has disconnected");
 		playerList.Remove (GetPlayerNode(player));
 		Network.RemoveRPCs(player);
 		Network.DestroyPlayerObjects(player);
 	}
 
-	void OnConnectedToServer()
+	public void OnConnectedToServer()
 	{
 		//ShowChatWindow ();
 
@@ -91,7 +91,7 @@ public class ChatWindow : MonoBehaviour {
 		//addGameChatMessage (playerName + "has just joined the server!"); 
 	}
 	
-	void OnServerInitialized()
+	public void OnServerInitialized()
 	{
 		ShowChatWindow ();
 		PlayerNode newEntry = new PlayerNode ();
@@ -101,7 +101,7 @@ public class ChatWindow : MonoBehaviour {
 		addGameChatMessage(playerName + " has just joined the Server!");
 	}
 
-	PlayerNode GetPlayerNode(NetworkPlayer player)
+	public PlayerNode GetPlayerNode(NetworkPlayer player)
 	{
 		foreach(PlayerNode entry in playerList)
 		{
@@ -115,7 +115,7 @@ public class ChatWindow : MonoBehaviour {
 	}
 	
 	[RPC]
-	void TellServerOurName(string name, NetworkMessageInfo info)
+	public void TellServerOurName(string name, NetworkMessageInfo info)
 	{
 		PlayerNode newEntry = new PlayerNode ();
 		newEntry.playerName = playerName;
@@ -124,7 +124,7 @@ public class ChatWindow : MonoBehaviour {
 		addGameChatMessage (playerName + " has Just joined Server!");
 	}
 	
-	void HitEnter(string msg)
+	public void HitEnter(string msg)
 	{
 		msg = msg.Replace ('\n', ' ');
 		networkView.RPC ("ApplyGlobalChatText", RPCMode.All, playerName, msg);
@@ -132,7 +132,7 @@ public class ChatWindow : MonoBehaviour {
 
 
 	[RPC]
-	void ApplyGlobalChatText(string name, string msg)
+	public void ApplyGlobalChatText(string name, string msg)
 	{
 		ChatEntry entry = new ChatEntry ();
 		entry.name = name;

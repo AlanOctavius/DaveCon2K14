@@ -65,7 +65,7 @@ public class GameOptions : MonoBehaviour {
 		
 	}
 
-	void StartGame()
+	public void StartGame()
 	{
 		Debug.Log ("Send message to clients to load level: " + LevelToLoad);
 		networkView.RPC ("sendLevel", RPCMode.All, LevelToLoad);
