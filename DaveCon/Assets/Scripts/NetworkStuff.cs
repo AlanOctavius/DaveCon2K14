@@ -7,6 +7,12 @@ public class NetworkStuff : MonoBehaviour {
 	private Transform myTransform;
 	private bool Alive = false;
 
+
+	void Start()
+	{
+		Network.sendRate = 30;
+	}
+
 	void OnGUI()
 	{
 		if(Alive == false)
