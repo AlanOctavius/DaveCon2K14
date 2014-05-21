@@ -65,7 +65,7 @@ public class ChatWindow : MonoBehaviour {
 			}
 		}
 
-		window = GUI.Window (5, window, GlobalChatWindow, "");
+		window = GUI.Window (5, window, GlobalChatWindow, "Chat!");
 
 	}
 
