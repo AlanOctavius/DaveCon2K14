@@ -71,4 +71,9 @@ public class PlayerController : MonoBehaviour {
 		Network.Destroy (networkView.viewID);
 	}
 
+	public void Destroy()
+	{
+		Network.Destroy (networkView.viewID);
+	}
+
 }
