@@ -16,6 +16,9 @@ public class ServerBrowser : MonoBehaviour {
 	private string registeredGameName = "SC_DaveCon_Network_Test_Server";
 	private Vector2 scrollPosition;
 	// Use this for initialization
+	private int  playerCount;
+	string levelToLoad = "";
+
 	void Start () {
 		w = PlayerPrefs.GetFloat ("defaultWidth");
 		h = PlayerPrefs.GetFloat ("defaultHeight");
@@ -74,8 +77,8 @@ public class ServerBrowser : MonoBehaviour {
 					directPort = GUILayout.TextArea(directPort);
 					if(GUILayout.Button("Join"))
 					{
-						Network.Connect(directIP,int.Parse(directPort));
-						Application.LoadLevel("GameLobby");
+						ConnectToServer(directIP,int.Parse(directPort));
+						//Application.LoadLevel("GameLobby");
 					}
 					
 				}
@@ -85,43 +88,75 @@ public class ServerBrowser : MonoBehaviour {
 					Debug.Log("Back button pressed from Server Browser, Loading Multiplayer Menu.");
 					Application.LoadLevel("MuliplayerMenu");
 				}
-				
+
+				GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(rect.width), GUILayout.Height(rect.height));
+				{
+					if(hostData != null)
+					{
+						GUILayout.BeginVertical();
+						{
+							for (int i = 0; i < hostData.Length; i++)
+							{
+								GUILayout.BeginHorizontal(); // also can put width in here
+								{
+									GUILayout.Label(hostData[i].gameName);
+									GUILayout.Label("players " + hostData[i].connectedPlayers + "/" + hostData[i].playerLimit);
+									if(GUILayout.Button("Join"))
+									{
+										//ConnectToServer(hostData[i].ip.ToString, hostData[i].port);
+										ConnectToServer(hostData[i]);
+									}
+								}
+								GUILayout.EndHorizontal();
+						
+
+							}
+						}
+						GUILayout.EndVertical();
+					}
+				}
+				GUILayout.EndScrollView ();
 			}
 			GUILayout.EndVertical();
 		}
-		GUILayout.EndArea();
-
-		rect.y = (3*Screen.height*(1-h))/4;
-		GUILayout.BeginArea (rect);
-		{
-			GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(rect.width), GUILayout.Height(rect.height));
-			{
-				if(hostData != null)
-				{
-					GUILayout.BeginVertical();
-					{
-						for (int i = 0; i < hostData.Length; i++)
-						{
-							GUILayout.BeginHorizontal(); // also can put width in here
-							{
-								GUILayout.Label(hostData[i].gameName);
-								GUILayout.Label("players " + hostData[i].connectedPlayers);
-								if(GUILayout.Button("Join"))
-								{
-									Network.Connect(hostData[i]);
-									Application.LoadLevel("GameLobby");
-								}
-							}
-							GUILayout.EndHorizontal();
-					
-
-						}
-					}
-					GUILayout.EndVertical();
-				}
-			}
-			GUILayout.EndScrollView ();
-		}
 		GUILayout.EndArea ();
 	}
+
+
+	void ConnectToServer(string IP, int Port)
+	{
+		Debug.Log("Connecting to server: " + IP + ":" + Port);
+		Network.Connect(IP,Port);
+	}
+	void ConnectToServer(HostData hostData)
+	{
+		//Debug.Log("Connecting to server: " + IP + ":" + Port);
+		Network.Connect(hostData);
+	}
+
+	
+	
+	[RPC]
+	void sendLevel(string level)
+	{
+		Debug.Log ("Retriving Server Info");
+		levelToLoad = level;
+		Debug.Log ("LevelToLoad: " + levelToLoad);
+		if(Network.isClient)
+		{
+			Network.SetSendingEnabled(0, false);	
+			Network.isMessageQueueRunning = false;
+			Application.LoadLevel (levelToLoad);
+			Network.isMessageQueueRunning = true;
+			Network.SetSendingEnabled (0, true);
+		}
+	}
+
+	[RPC]
+	void PassPlayerCount(int players)
+	{
+		
+		playerCount = players;
+	}
+
 }

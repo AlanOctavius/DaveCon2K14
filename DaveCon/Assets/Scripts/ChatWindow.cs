@@ -11,15 +11,14 @@ public class ChatWindow : MonoBehaviour {
 	public string playerName;
 	//GUIStyle style;
 
-	private int width = 500;
-	private int height = 200;
+	private int width = Screen.width/4;
+	private int height = Screen.height/4;
 	private float lastUnfocusTime = 0;
 	Rect window;
 	public class PlayerNode
 	{
 		public string playerName;
 		public NetworkPlayer player;
-		
 	}
 	
 	ArrayList chatEntries = new ArrayList();
@@ -33,13 +32,17 @@ public class ChatWindow : MonoBehaviour {
 
 	void Start()
 	{
-		window = new Rect (Screen.width / 2 - width / 2, Screen.height - height + 5, width, height);
+		window = new Rect (width/2,Screen.height/2 + height/2, width, height);
 
 		playerName = PlayerPrefs.GetString ("PlayerName");
 
 		if(playerName == "")
 		{
 			playerName = "RandomName"+Random.Range(1,99);
+		}
+		if(Network.isClient)
+		{
+			networkView.RPC ("ApplyGlobalChatText", RPCMode.All, playerName, " has joined the server");
 		}
 	}
 
@@ -66,27 +69,26 @@ public class ChatWindow : MonoBehaviour {
 
 	}
 
-
-	void OnPlayerConnected(NetworkPlayer player) {
-		//Player connected
-		addGameChatMessage("A Player Has connected");
-	}
-	
-	void OnPlayerDisconnected(NetworkPlayer player) {
-		addGameChatMessage ("A player has disconnected");
-		playerList.Remove (GetPlayerNode(player));
-	}
-
-	void OnDisconnectedFromServer()
-	{
+	void OnDisconnectedFromServer(NetworkDisconnection info) {
 		CloseChatWindow ();
+		Debug.Log("Disconnected from server: " + info);
+		Application.LoadLevel ("MainMEnu");
+	}
+
+	void OnPlayerDisconnected(NetworkPlayer player) {
+		addGameChatMessage (" A player has disconnected");
+		playerList.Remove (GetPlayerNode(player));
+		Network.RemoveRPCs(player);
+		Network.DestroyPlayerObjects(player);
 	}
 
 	void OnConnectedToServer()
 	{
-		ShowChatWindow ();
-		networkView.RPC ("TellServerOurName", RPCMode.Server, playerName);
-		addGameChatMessage (playerName + "has just joined the server!");
+		//ShowChatWindow ();
+
+		//removed as is called before player loaded in which causes a failed RPC as no response is recived
+		//networkView.RPC ("TellServerOurName", RPCMode.Server, playerName);
+		//addGameChatMessage (playerName + "has just joined the server!"); 
 	}
 	
 	void OnServerInitialized()
@@ -96,7 +98,7 @@ public class ChatWindow : MonoBehaviour {
 		newEntry.playerName = playerName;
 		newEntry.player = Network.player;
 		playerList.Add(newEntry);
-		addGameChatMessage(playerName + "has just joined the Server!");
+		addGameChatMessage(playerName + " has just joined the Server!");
 	}
 
 	PlayerNode GetPlayerNode(NetworkPlayer player)
@@ -127,6 +129,8 @@ public class ChatWindow : MonoBehaviour {
 		msg = msg.Replace ('\n', ' ');
 		networkView.RPC ("ApplyGlobalChatText", RPCMode.All, playerName, msg);
 	}
+
+
 	[RPC]
 	void ApplyGlobalChatText(string name, string msg)
 	{
@@ -185,7 +189,7 @@ public class ChatWindow : MonoBehaviour {
 					}
 					else
 					{
-						GUILayout.Label(entry.name + ":" + entry.text);
+						GUILayout.Label(entry.name + ": " + entry.text);
 					}
 
 				}

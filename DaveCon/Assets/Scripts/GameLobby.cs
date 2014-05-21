@@ -20,9 +20,6 @@ public class GameLobby : MonoBehaviour {
 	{
 		w = PlayerPrefs.GetFloat ("defaultWidth");
 		h = PlayerPrefs.GetFloat ("defaultHeight");
-
-		players = Network.connections.Length;
-		playerCount = players;
 		playerName = PlayerPrefs.GetString("PlayerName");
 	}
 	
@@ -53,15 +50,23 @@ public class GameLobby : MonoBehaviour {
 
 				if(Network.isClient || Network.isServer)
 				{
-					playersConnected = (Network.connections.Length + 1).ToString();// playerCount.ToString;
-					GUILayout.Label("Players connected: " + playersConnected );
+					if(Network.isServer)
+					{
+						networkView.RPC ("PassPlayerCount", RPCMode.All, Network.connections.Length+1);
+						playerCount =  Network.connections.Length+1;
+					}
+					GUILayout.Label("Players connected: " + playerCount );
+				
 					GUILayout.Label ("Connected with Name : " + playerName);
+
 				}
 				if(Network.isClient)
 				{
 					//Stats for player
 					GUILayout.Label("Ping: "+ Network.GetAveragePing(Network.connections[0]) + " ms");
 				}
+
+				GUILayout.Label("Current Scene: " + Application.loadedLevelName);
 				if (GUILayout.Button("Disconnect")) // also can put width here
 				{
 					Network.Disconnect();
@@ -78,27 +83,30 @@ public class GameLobby : MonoBehaviour {
 		GUILayout.EndArea();
 
 	}
-	void Update()
-	{
-		playerCount = Network.connections.Length;
-		//ping = Network.GetAveragePing();
-	}
+
+
 
 	void OnDisconnectedFromServer(NetworkDisconnection info) {
 		Debug.Log("Disconnected from server: " + info);
 		Application.LoadLevel ("MainMEnu");
 	}
 
-	void OnPlayerConnected(NetworkPlayer player) {
-		playerCount++;
-		Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
-	}
+
 
 	void OnPlayerDisconnected(NetworkPlayer player) {
 		Network.RemoveRPCs(player);
 		Network.DestroyPlayerObjects(player);
-		playerCount--;
+		//playerCount--;
+		if(Network.isServer)
+		{
+			networkView.RPC ("PassPlayerCount", RPCMode.All, Network.connections.Length+1);
+		}
 	}
 	
+	[RPC]
+	void PassPlayerCount(int players)
+	{
 
+		playerCount = players;
+	}
 }

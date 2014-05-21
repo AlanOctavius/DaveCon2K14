@@ -9,14 +9,15 @@ public class MainMenu : MonoBehaviour {
 	private Rect rect;
 
 	private string playerName = "Player 1";
-
 	void Start()
 	{
 		//Check if defaults exsits if not create them if no set them
 		//Debug.Log ("Calling CheckPrefs");
+		Application.targetFrameRate = -1;
 		w = PlayerPrefs.GetFloat ("defaultWidth");
 		h = PlayerPrefs.GetFloat ("defaultHeight");
 		playerName = PlayerPrefs.GetString ("PlayerName");
+
 	}
 
 	//GUIStyle style;
@@ -52,11 +53,11 @@ public class MainMenu : MonoBehaviour {
 				}
 				if (GUILayout.Button("Settings")) // also can put width here
 				{
-					//Application.LoadLevel(1);
+					Application.LoadLevel("SettingsMenu");
 				}
 				if (GUILayout.Button("Credits")) // also can put width here
 				{
-					//Application.LoadLevel(1);
+					Application.LoadLevel("Credits");
 				}
 				if (GUILayout.Button("Exit")) // also can put width here
 				{
