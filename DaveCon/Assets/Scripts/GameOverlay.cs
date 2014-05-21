@@ -50,13 +50,9 @@ public class GameOverlay : MonoBehaviour {
 			mousePos = Input.mousePosition;
 			if(mousePos.x < Screen.width / 2 - Screen.width / 4 || mousePos.x > 3*Screen.width / 4 || mousePos.y < Screen.height / 2 - Screen.height / 4 || mousePos.y > 3*Screen.height / 4 )
 			{
-				if(showMenu == true)
+				if(showMenu== true)
 				{
 					showMenu = false;
-				}
-				else
-				{
-					showMenu = true;
 				}
 			}
 		}
