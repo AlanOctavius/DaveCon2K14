@@ -8,7 +8,7 @@ public class GameOverlay : MonoBehaviour {
 	private bool showMenu = false;
 	private Vector2 scrollPosition;
 	private Vector3 mousePos;
-	public void OnGUI()
+	void OnGUI()
 	{
 		rect.x = Screen.width / 2 - Screen.width / 4;
 		rect.y = Screen.height / 2 - Screen.height / 4;
@@ -58,7 +58,7 @@ public class GameOverlay : MonoBehaviour {
 		}
 	}
 
-	void OpenMyWindow(int winID)
+	public void OpenMyWindow(int winID)
 	{
 		GUI.BringWindowToFront(winID);
 		GUI.FocusWindow(winID); 
@@ -97,7 +97,7 @@ public class GameOverlay : MonoBehaviour {
 	}
 
 
-	void EndGame()
+	public void EndGame()
 	{
 		Debug.Log ("Send message to clients to load level: " + "GameLobby");
 		networkView.RPC ("LoadGameLobby", RPCMode.All,"GameLobby");

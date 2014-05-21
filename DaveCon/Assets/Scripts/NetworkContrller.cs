@@ -9,7 +9,7 @@ public class NetworkContrller : MonoBehaviour {
 
 
 	// Send player current level
-	void OnPlayerConnected(NetworkPlayer player) {
+	public void OnPlayerConnected(NetworkPlayer player) {
 		//Player connected
 		//get current level name
 		currentLevel = Application.loadedLevelName;
@@ -18,7 +18,7 @@ public class NetworkContrller : MonoBehaviour {
 
 
 	[RPC]
-	void sendLevel(string level)
+	public void sendLevel(string level)
 	{
 		Debug.Log("Load Level: " + currentLevel);
 		levelToLoad = currentLevel;

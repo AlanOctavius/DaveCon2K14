@@ -86,14 +86,14 @@ public class GameLobby : MonoBehaviour {
 
 
 
-	void OnDisconnectedFromServer(NetworkDisconnection info) {
+	public void OnDisconnectedFromServer(NetworkDisconnection info) {
 		Debug.Log("Disconnected from server: " + info);
 		Application.LoadLevel ("MainMEnu");
 	}
 
 
 
-	void OnPlayerDisconnected(NetworkPlayer player) {
+	public void OnPlayerDisconnected(NetworkPlayer player) {
 		Network.RemoveRPCs(player);
 		Network.DestroyPlayerObjects(player);
 		//playerCount--;

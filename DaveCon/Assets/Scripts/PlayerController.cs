@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
-	void Awake()
+	public void Awake()
 	{
 		if (!networkView.isMine)
 		{
@@ -16,14 +16,14 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 	
 	}
 
-	Vector3 lastPosition;
-	float minimumMovement = .05f;
+	public Vector3 lastPosition;
+	public float minimumMovement = .05f;
 	// Update is called once per frame
-	void FixedUpdate () {
+	public void FixedUpdate () {
 
 		if (networkView.isMine)
 		{
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 	
 	}
 	
-	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	public void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		if (stream.isWriting)
 		{
@@ -60,13 +60,13 @@ public class PlayerController : MonoBehaviour {
 
 
 	[RPC]
-	void SetPosition(Vector3 newPosition)
+	public void SetPosition(Vector3 newPosition)
 	{
 		transform.position = newPosition;
 	}
 
 
-	void Boom()
+	public void Boom()
 	{
 		Network.Destroy (networkView.viewID);
 	}
