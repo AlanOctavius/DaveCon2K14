@@ -3,23 +3,19 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	private Transform Position;
-	private GameObject Here;
+	private bool ifAlive = false;
+	public Transform cubePrefab;
+
 	public void Awake()
 	{
 		if (!networkView.isMine)
 		{
 			enabled = false;
 		}
-		if(networkView.isMine)
-		{
-			Here = GameObject.FindGameObjectWithTag("MainCamera");
-			Here.gameObject.GetComponent<GameCamera>().SetAlive(true);
-		}
 	}
 	// Use this for initialization
 	public void Start () {
-
+	
 	}
 
 	public Vector3 lastPosition;
@@ -47,7 +43,10 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (networkView.isMine)
 		{
-			Here.gameObject.GetComponent<GameCamera>().SetPosition(transform);
+			if(ifAlive == true)
+			{
+				//Camera.current.
+			}
 		}
 	}
 
@@ -77,13 +76,11 @@ public class PlayerController : MonoBehaviour {
 
 	public void Boom()
 	{
-		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
 		Network.Destroy (networkView.viewID);
 	}
 
 	public void Destroy()
 	{
-		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
 		Network.Destroy (networkView.viewID);
 	}
 
