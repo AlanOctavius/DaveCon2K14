@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour {
 	private bool ifAlive = false;
 	public Transform cubePrefab;
 
-
-
 	public void Awake()
 	{
 		if (!networkView.isMine)
@@ -37,12 +35,22 @@ public class PlayerController : MonoBehaviour {
 				lastPosition = transform.position;
 				networkView.RPC("SetPosition", RPCMode.Others, transform.position);
 			}
-
-
 		}
 	
 	}
-	
+
+	void LateUpdate()
+	{
+		if (networkView.isMine)
+		{
+			if(ifAlive == true)
+			{
+				//Camera.current.
+			}
+		}
+	}
+
+	/*
 	public void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
 	{
 		if (stream.isWriting)
@@ -56,7 +64,7 @@ public class PlayerController : MonoBehaviour {
 			stream.Serialize(ref receivedPosition); //"Decode" it and receive it
 			transform.position = receivedPosition;
 		}
-	}
+	}*/
 
 
 	[RPC]

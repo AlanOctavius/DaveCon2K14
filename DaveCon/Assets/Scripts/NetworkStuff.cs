@@ -39,8 +39,7 @@ public class NetworkStuff : MonoBehaviour {
 	{
 		Transform mt;
 		mt = (Transform)Network.Instantiate(cubePrefab, transform.position, transform.rotation, 0);
-		myTransform = mt;
-
+		//cam.GetComponenent<MainCamera>().target = target;
 	}
 
 	/*[RPC]
