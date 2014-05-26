@@ -28,6 +28,14 @@ DaveCon/Library/CurrentMaximizeLayout.dwlt
 DaveCon/Library/CurrentLayout.dwlt
 DaveCon/DaveCon.userprefs
 <<<<<<< HEAD
+*.dll
+DaveCon/DaveCon-csharp.sln
+DaveCon/DaveCon.sln
+DaveCon/Library/ScriptAssemblies/Assembly-CSharp.dll
+DaveCon/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+DaveCon/Library/assetDatabase3
+=======
+<<<<<<< HEAD
 DaveCon/Library/assetDatabase3
 DaveCon/Library/metadata/c7/c72a62d8861a8a8489284089d314a3f5
 DaveCon/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
@@ -35,4 +43,8 @@ DaveCon/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
 *.dll
 >>>>>>> f43c4f6c6d98ea293956df208521a25914638d1f
 DaveCon/DaveCon_Data/output_log.txt
+<<<<<<< HEAD
 DaveCon/DaveCon_Data/output_log.txt
+=======
+>>>>>>> ac0f6c66bc652f36c70c32e58b9661a27cf31d3f
+>>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
