@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\MultiplayerMenu.cs" />
      <Compile Include="Assets\Scripts\NetworkContrller.cs" />
+     <Compile Include="Assets\Scripts\NetworkInterpolatedTransforms.cs" />
      <Compile Include="Assets\Scripts\NetworkStuff.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PlayerControlMeta.cs" />
@@ -65,6 +66,8 @@
      <Compile Include="Assets\Scripts\ServerBrowser.cs" />
      <Compile Include="Assets\Scripts\SetDefaults.cs" />
      <Compile Include="Assets\Scripts\SettingsMenu.cs" />
+     <Compile Include="Assets\Scripts\SpikeControl.cs" />
+     <Compile Include="Assets\Scripts\SpringController.cs" />
      <Compile Include="Assets\Scripts\StartPage.cs" />
      <Compile Include="Assets\Scripts\level generation\dataload.cs" />
      <None Include="Assets\Resources\Level Generation\special areas\ground\g2.txt" />

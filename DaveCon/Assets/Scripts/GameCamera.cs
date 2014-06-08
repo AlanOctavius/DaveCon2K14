@@ -5,7 +5,7 @@ public class GameCamera : MonoBehaviour {
 	
 	private Transform target;
 	public float trackAccel = 1;
-	private bool Alive = false;
+	public bool Alive = false;
 	private Vector3 pos;
 	private float x = 0;
 	private float y = 10;
@@ -32,8 +32,6 @@ public class GameCamera : MonoBehaviour {
 	}
 	void LateUpdate()
 	{
-
-
 		if (Alive)
 		{
 			float x = IncrementTowards(transform.position.x,target.position.x,trackAccel);

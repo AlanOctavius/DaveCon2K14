@@ -5,17 +5,22 @@ public class PlayerController : MonoBehaviour {
 
 	private Transform Position;
 	private GameObject Here;
+	private NetworkStuff NetworkAlive;
 
 	public void Awake()
 	{
 		if (!networkView.isMine)
 		{
 			enabled = false;
+			//GetComponent<NetworkInterpolatedTransforms>().enabled = false;
 		}
 		else
 		{
 			Here = GameObject.FindGameObjectWithTag("MainCamera");
 			Here.gameObject.GetComponent<GameCamera>().SetAlive(true);
+			//NetworkAlive = GameObject.FindGameObjectWithTag("NetworkController");
+			//NetworkAlive..GetComponent<NetworkStuff>().PlayerAlive(true);
+			//GetComponent<NetworkInterpolatedTransforms>().enabled = true;
 		}
 	}
 	// Use this for initialization
@@ -66,9 +71,9 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	/*
-	public void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
-	{
+
+	//public void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	/*{
 		if (stream.isWriting)
 		{
 			Vector3 myPosition = transform.position;
@@ -99,12 +104,31 @@ public class PlayerController : MonoBehaviour {
 	public void Boom()
 	{
 		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
+		if(networkView.isMine)
+		{
+			//NetworkAlive.PlayerAlive(false);
+			Debug.Log ("Sending message to Network Stuff to change player to dead");
+			//NetworkAlive = gameObject.GetComponent<NetworkStuff>();
+			//NetworkAlive.PlayerAlive(false);
+		}
 		Network.Destroy (networkView.viewID);
-	}
 
+	}
+	public void Spring()
+	{
+		rigidbody2D.AddForce (new Vector2 (0, 100));
+	}
+	
 	public void Destroy()
 	{
 		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
+		if(networkView.isMine)
+		{
+		// NetworkAlive.PlayerAlive(false);
+		// Debug.Log ("Sending message to Network Stuff to change player to dead");
+		 	//NetworkAlive = gameObject.GetComponent<NetworkStuff>();
+			//NetworkAlive.Alive = false;
+		}
 		Network.Destroy (networkView.viewID);
 	}
 
