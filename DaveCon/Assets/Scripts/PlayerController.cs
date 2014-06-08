@@ -122,9 +122,9 @@ public class PlayerController : MonoBehaviour {
 		Network.Destroy (networkView.viewID);
 
 	}
-	public void Spring()
+	public void Spring(float A)
 	{
-		rigidbody2D.AddForce (new Vector2 (0, 100));
+		rigidbody2D.AddForce (new Vector2 (0, A));
 	}
 	
 	public void Destroy()

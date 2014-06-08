@@ -48,7 +48,6 @@ public class GameCamera : MonoBehaviour {
 
 	void Update()
 	{
-
 			newPos = transform.position;
 			newPos = new Vector3(newPos.x + speed*Time.deltaTime*Input.GetAxis("Horizontal"),newPos.y + speed*Time.deltaTime*Input.GetAxis("Vertical") , -20);
 	}
