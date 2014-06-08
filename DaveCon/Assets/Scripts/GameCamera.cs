@@ -32,24 +32,25 @@ public class GameCamera : MonoBehaviour {
 	}
 	void LateUpdate()
 	{
-		if (Alive)
-		{
-			float x = IncrementTowards(transform.position.x,target.position.x,trackAccel);
-			float y = IncrementTowards(transform.position.y,target.position.y,trackAccel);
-			transform.position = new Vector3(x,y,-20);
-		}
-		else
-		{
-			float x = IncrementTowards(transform.position.x,newPos.x,trackAccel);
-			float y = IncrementTowards(transform.position.y,newPos.y,trackAccel);
-			transform.position = new Vector3(x,y,-20);
-		}
+			if (Alive)
+			{
+				float x = IncrementTowards(transform.position.x,target.position.x,trackAccel);
+				float y = IncrementTowards(transform.position.y,target.position.y,trackAccel);
+				transform.position = new Vector3(x,y,-20);
+			}
+			else
+			{
+				float x = IncrementTowards(transform.position.x,newPos.x,trackAccel);
+				float y = IncrementTowards(transform.position.y,newPos.y,trackAccel);
+				transform.position = new Vector3(x,y,-20);
+			}
 	}
 
 	void Update()
 	{
-		newPos = transform.position;
-		newPos = new Vector3(newPos.x + speed*Time.deltaTime*Input.GetAxis("Horizontal"),newPos.y + speed*Time.deltaTime*Input.GetAxis("Vertical") , -20);
+
+			newPos = transform.position;
+			newPos = new Vector3(newPos.x + speed*Time.deltaTime*Input.GetAxis("Horizontal"),newPos.y + speed*Time.deltaTime*Input.GetAxis("Vertical") , -20);
 	}
 	
 	private float IncrementTowards(float n, float target, float accel)

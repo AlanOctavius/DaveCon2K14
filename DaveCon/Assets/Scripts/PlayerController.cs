@@ -7,17 +7,21 @@ public class PlayerController : MonoBehaviour {
 	private GameObject Here;
 	private NetworkStuff NetworkAlive;
 
+	private bool Mine;
+
 	public void Awake()
 	{
 		if (!networkView.isMine)
 		{
 			enabled = false;
+			Mine = false;
 			//GetComponent<NetworkInterpolatedTransforms>().enabled = false;
 		}
 		else
 		{
 			Here = GameObject.FindGameObjectWithTag("MainCamera");
 			Here.gameObject.GetComponent<GameCamera>().SetAlive(true);
+			Mine = true;
 			//NetworkAlive = GameObject.FindGameObjectWithTag("NetworkController");
 			//NetworkAlive..GetComponent<NetworkStuff>().PlayerAlive(true);
 			//GetComponent<NetworkInterpolatedTransforms>().enabled = true;
@@ -44,6 +48,10 @@ public class PlayerController : MonoBehaviour {
 			{
 				lastPosition = transform.position;
 				networkView.RPC("SetPosition", RPCMode.Others, transform.position);
+				if(Mine == true)
+				{
+					Here.gameObject.GetComponent<GameCamera>().SetPosition(transform);
+				}
 			}
 
 			if(Input.GetAxis("Vertical") < 0)
@@ -66,7 +74,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (networkView.isMine)
 		{
-			Here.gameObject.GetComponent<GameCamera>().SetPosition(transform);
+
 			//Debug.Log("Here");
 		}
 	}

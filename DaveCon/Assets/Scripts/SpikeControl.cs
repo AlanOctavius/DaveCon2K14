@@ -13,4 +13,10 @@ public class SpikeControl : MonoBehaviour {
 
 		//Debug.Log("GameObject joins players");
 	}
+
+	public void Destroy()
+	{
+		Network.Destroy (networkView.viewID);
+	}
+
 }
