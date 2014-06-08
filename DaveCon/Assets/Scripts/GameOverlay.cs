@@ -25,12 +25,6 @@ public class GameOverlay : MonoBehaviour {
 		}
 	}
 
-
-
-
-
-
-
 	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.Escape))

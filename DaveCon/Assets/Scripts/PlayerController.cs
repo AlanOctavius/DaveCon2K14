@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	private bool ifAlive = false;
-	public Transform cubePrefab;
+	private Transform Position;
+	private GameObject Here;
 
 	public void Awake()
 	{
@@ -12,16 +12,21 @@ public class PlayerController : MonoBehaviour {
 		{
 			enabled = false;
 		}
+		else
+		{
+			Here = GameObject.FindGameObjectWithTag("MainCamera");
+			Here.gameObject.GetComponent<GameCamera>().SetAlive(true);
+		}
 	}
 	// Use this for initialization
 	public void Start () {
-	
+
 	}
 
 	public Vector3 lastPosition;
 	public float minimumMovement = .05f;
 	// Update is called once per frame
-	public void FixedUpdate () {
+	public void Update () {
 
 		if (networkView.isMine)
 		{
@@ -35,6 +40,19 @@ public class PlayerController : MonoBehaviour {
 				lastPosition = transform.position;
 				networkView.RPC("SetPosition", RPCMode.Others, transform.position);
 			}
+
+			if(Input.GetAxis("Vertical") < 0)
+			{
+				transform.localScale = new Vector3(1,1,1);
+				networkView.RPC("SetDuck", RPCMode.Others, new Vector3(1,1,1));
+			}
+			else
+			{
+				transform.localScale = new Vector3(1,2,1);
+				networkView.RPC("SetDuck", RPCMode.Others, new Vector3(1,2,1));
+			}
+
+
 		}
 	
 	}
@@ -43,10 +61,8 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (networkView.isMine)
 		{
-			if(ifAlive == true)
-			{
-				//Camera.current.
-			}
+			Here.gameObject.GetComponent<GameCamera>().SetPosition(transform);
+			//Debug.Log("Here");
 		}
 	}
 
@@ -73,14 +89,22 @@ public class PlayerController : MonoBehaviour {
 		transform.position = newPosition;
 	}
 
+	[RPC]
+	public void SetDuck (Vector3 Scale)
+	{
+		transform.localScale = Scale;
+	}
+
 
 	public void Boom()
 	{
+		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
 		Network.Destroy (networkView.viewID);
 	}
 
 	public void Destroy()
 	{
+		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
 		Network.Destroy (networkView.viewID);
 	}
 

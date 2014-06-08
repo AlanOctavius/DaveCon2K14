@@ -98,7 +98,7 @@ public class ChatWindow : MonoBehaviour {
 		newEntry.playerName = playerName;
 		newEntry.player = Network.player;
 		playerList.Add(newEntry);
-		addGameChatMessage(playerName + " has just joined the Server!");
+		//addGameChatMessage(playerName + " has just joined the Server!");
 	}
 
 	public PlayerNode GetPlayerNode(NetworkPlayer player)

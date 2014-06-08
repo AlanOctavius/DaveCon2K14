@@ -2,26 +2,17 @@ Initialize engine version: 4.3.4f1 (e444f76e01cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.3523]
-    Renderer: NVIDIA GeForce GTX 550 Ti
+    Renderer: NVIDIA GeForce GTX 460
     Vendor:   NVIDIA
     VRAM:     977 MB (via DXGI)
     Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
 Begin MonoManager ReloadAssembly
-<<<<<<< HEAD
 Platform assembly: C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Dave\Documents\GitHub\DaveCon2K14\DaveCon\DaveCon_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.041 seconds
+- Completed reload, in  0.042 seconds
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
-=======
-Platform assembly: T:\steamfolk\repo\DaveCon2K14\DaveCon\DaveCon_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading T:\steamfolk\repo\DaveCon2K14\DaveCon\DaveCon_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: T:\steamfolk\repo\DaveCon2K14\DaveCon\DaveCon_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading T:\steamfolk\repo\DaveCon2K14\DaveCon\DaveCon_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.093 seconds
-desktop: 1920x1080 60Hz; virtual: 3200x1154 at -1280,-74
->>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
 <RI> Initializing input.
 <RI> Input initialized.
 Setting default values for PlayerPrefs
@@ -64,259 +55,45 @@ A key or mouse click has been detected, loading Main Menu
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-<<<<<<< HEAD
-UnloadTime: 0.205641 ms
+UnloadTime: 0.243468 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 111.
-Total: 0.661581 ms (FindLiveObjects: 0.007964 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.082768 ms  DeleteObjects: 0.002844 ms)
-=======
-<<<<<<< HEAD
-UnloadTime: 1.597752 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 108.
-Total: 0.426191 ms (FindLiveObjects: 0.004948 ms CreateObjectMapping: 0.005567 ms MarkObjects: 0.077939 ms  DeleteObjects: 0.002474 ms)
-=======
-<<<<<<< HEAD
-UnloadTime: 0.158995 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 108.
-Total: 0.392227 ms (FindLiveObjects: 0.004550 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.075658 ms  DeleteObjects: 0.002559 ms)
-=======
-<<<<<<< HEAD
-UnloadTime: 0.220829 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 102.
-Total: 0.430834 ms (FindLiveObjects: 0.004329 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.076702 ms  DeleteObjects: 0.002474 ms)
-=======
-UnloadTime: 0.269922 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 108.
-Total: 0.435744 ms (FindLiveObjects: 0.007110 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.088741 ms  DeleteObjects: 0.002559 ms)
->>>>>>> b3675de947f73a343252158cf0902129a9bc9ff8
->>>>>>> c05c8459dcb662af5f7472ef88c39356149300f4
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
->>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 114.
+Total: 0.433750 ms (FindLiveObjects: 0.007395 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.084474 ms  DeleteObjects: 0.002844 ms)
 
 Multiplayer Button Pressed, loading MultiplayerMenu
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-<<<<<<< HEAD
-UnloadTime: 0.162124 ms
+UnloadTime: 0.182317 ms
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 121.
-Total: 0.646790 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.083337 ms  DeleteObjects: 0.001706 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 124.
+Total: 0.425501 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.091585 ms  DeleteObjects: 0.002275 ms)
 
-UnloadTime: 0.152453 ms
+UnloadTime: 0.182317 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 116.
-Total: 0.635982 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.088172 ms  DeleteObjects: 0.001991 ms)
-
-Create Server Button Pressed from Create Server Menu, Creating server
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Server Name DaveCon Server
-=======
-<<<<<<< HEAD
-UnloadTime: 0.216806 ms
-=======
-<<<<<<< HEAD
-UnloadTime: 0.156720 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 118.
-Total: 0.407017 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.083337 ms  DeleteObjects: 0.001991 ms)
-
-UnloadTime: 0.143636 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 113.
-Total: 0.398768 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.082768 ms  DeleteObjects: 0.001991 ms)
-=======
-<<<<<<< HEAD
-UnloadTime: 0.209386 ms
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 112.
-Total: 0.433308 ms (FindLiveObjects: 0.004020 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.084744 ms  DeleteObjects: 0.002164 ms)
-
-UnloadTime: 0.214953 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 107.
-Total: 0.422792 ms (FindLiveObjects: 0.004329 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.087837 ms  DeleteObjects: 0.001855 ms)
-
-UnloadTime: 0.209076 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 117.
-Total: 0.481866 ms (FindLiveObjects: 0.004329 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.131446 ms  DeleteObjects: 0.001855 ms)
-=======
-UnloadTime: 0.271344 ms
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 118.
-Total: 0.439799 ms (FindLiveObjects: 0.004639 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.090310 ms  DeleteObjects: 0.002164 ms)
-
-UnloadTime: 0.196085 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-<<<<<<< HEAD
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 114.
-Total: 0.429283 ms (FindLiveObjects: 0.004020 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.092784 ms  DeleteObjects: 0.002164 ms)
-=======
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 113.
-Total: 0.412137 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.093577 ms  DeleteObjects: 0.002275 ms)
->>>>>>> c05c8459dcb662af5f7472ef88c39356149300f4
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 120.
+Total: 0.444842 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.124294 ms  DeleteObjects: 0.002559 ms)
 
 Back button pressed from Server Browser, Loading Multiplayer Menu.
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-<<<<<<< HEAD
-UnloadTime: 0.204435 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-=======
-Server Name Alan Smells
->>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-connectionPort 25001
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Max Players 4
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Initialising Server
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-<<<<<<< HEAD
-=======
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 119.
-Total: 0.482789 ms (FindLiveObjects: 0.004329 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.106393 ms  DeleteObjects: 0.002164 ms)
-
-<<<<<<< HEAD
-UnloadTime: 0.217734 ms
+UnloadTime: 0.184023 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 113.
-Total: 0.436397 ms (FindLiveObjects: 0.004020 ms CreateObjectMapping: 0.005257 ms MarkObjects: 0.102991 ms  DeleteObjects: 0.002164 ms)
-=======
-<<<<<<< HEAD
-UnloadTime: 0.158711 ms
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 125.
+Total: 0.435456 ms (FindLiveObjects: 0.004835 ms CreateObjectMapping: 0.009954 ms MarkObjects: 0.105522 ms  DeleteObjects: 0.001990 ms)
+
+UnloadTime: 0.162407 ms
 Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 132.
-Total: 0.407870 ms (FindLiveObjects: 0.006257 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.104385 ms  DeleteObjects: 0.001991 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 120.
+Total: 0.423510 ms (FindLiveObjects: 0.004266 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.104384 ms  DeleteObjects: 0.002275 ms)
 
-Sending message to Other users
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
->>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
-
-Server Created
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-UnloadTime: 0.153591 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 134.
-Total: 0.665563 ms (FindLiveObjects: 0.004835 ms CreateObjectMapping: 0.007395 ms MarkObjects: 0.094999 ms  DeleteObjects: 0.001991 ms)
-
-Send message to clients to load level: MAP1
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Load Level: 
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-<<<<<<< HEAD
-=======
-=======
-UnloadTime: 0.168097 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 131.
-Total: 0.424652 ms (FindLiveObjects: 0.005404 ms CreateObjectMapping: 0.007679 ms MarkObjects: 0.104954 ms  DeleteObjects: 0.001991 ms)
->>>>>>> c05c8459dcb662af5f7472ef88c39356149300f4
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
->>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
-
-Load Level: 
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-<<<<<<< HEAD
-UnloadTime: 0.158711 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 196.
-Total: 0.702823 ms (FindLiveObjects: 0.006826 ms CreateObjectMapping: 0.008248 ms MarkObjects: 0.123726 ms  DeleteObjects: 0.002559 ms)
-
-GetPlayerNode: Requested a playerNode of non-existing player!
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-=======
-UnloadTime: 0.222683 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 126.
-Total: 0.451861 ms (FindLiveObjects: 0.004329 ms CreateObjectMapping: 0.005567 ms MarkObjects: 0.113506 ms  DeleteObjects: 0.002164 ms)
-
-<<<<<<< HEAD
-UnloadTime: 0.178146 ms
-Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 114.
-Total: 0.476294 ms (FindLiveObjects: 0.004329 ms CreateObjectMapping: 0.005876 ms MarkObjects: 0.131135 ms  DeleteObjects: 0.002164 ms)
-=======
-<<<<<<< HEAD
-UnloadTime: 0.176914 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 192.
-Total: 0.460205 ms (FindLiveObjects: 0.006826 ms CreateObjectMapping: 0.009386 ms MarkObjects: 0.135103 ms  DeleteObjects: 0.002559 ms)
-=======
-UnloadTime: 0.175492 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 156.
-Total: 0.576821 ms (FindLiveObjects: 0.006257 ms CreateObjectMapping: 0.007964 ms MarkObjects: 0.175776 ms  DeleteObjects: 0.002559 ms)
->>>>>>> c05c8459dcb662af5f7472ef88c39356149300f4
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
-
-Refresh Server List Button Clciked
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-<<<<<<< HEAD
-Refreshing ... 
-=======
-No objects for the given player ID were deleted 1
- 
-(Filename:  Line: 1368)
-<<<<<<< HEAD
-=======
-
-Ending game and returning to game lobby
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
+Connecting to server: 127.0.0.1:25001
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
@@ -328,22 +105,22 @@ LevelToLoad: MAP1
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 0.180002 ms
+View ID SceneID: 2 Level Prefix: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1676)
+
+Received state update for view id' SceneID: 2 Level Prefix: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2469)
+
+UnloadTime: 0.167811 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-<<<<<<< HEAD
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 186.
-Total: 0.545264 ms (FindLiveObjects: 0.006804 ms CreateObjectMapping: 0.006494 ms MarkObjects: 0.140723 ms  DeleteObjects: 0.002164 ms)
-=======
-Disconnected from server: Disconnected
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
->>>>>>> b3675de947f73a343252158cf0902129a9bc9ff8
->>>>>>> c05c8459dcb662af5f7472ef88c39356149300f4
->>>>>>> 75cfb36cc68a8fb4cdc910b806bf7cd339afe302
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 192.
+Total: 0.461623 ms (FindLiveObjects: 0.006826 ms CreateObjectMapping: 0.008248 ms MarkObjects: 0.114339 ms  DeleteObjects: 0.002275 ms)
 
->>>>>>> 21dfaabfa8cebfc2ba3cf06528615eb6a74e5d12
-Disconnected from server: Disconnected
+NullReferenceException: Object reference not set to an instance of an object
+  at GameCamera.LateUpdate () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+(Filename:  Line: -1)
 

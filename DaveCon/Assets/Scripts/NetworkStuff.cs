@@ -7,10 +7,10 @@ public class NetworkStuff : MonoBehaviour {
 	private Transform myTransform;
 	private bool Alive = false;
 
-
 	public void Start()
 	{
 		Network.sendRate = 30;
+
 	}
 
 	public void OnGUI()
@@ -37,23 +37,8 @@ public class NetworkStuff : MonoBehaviour {
 
 	public void SpawnPlayer()
 	{
-		Transform mt;
-		mt = (Transform)Network.Instantiate(cubePrefab, transform.position, transform.rotation, 0);
-		//cam.GetComponenent<MainCamera>().target = target;
+		myTransform = (Transform)Network.Instantiate(cubePrefab, transform.position, transform.rotation, 0);
 	}
-
-	/*[RPC]
-	void RPCSpawnPlayer()
-	{
-		player =  Instantiate(cubePrefab, transform.position, transform.rotation, 0);
-	}
-
-	[RPC]
-	void RPCKillPlayer ()
-	{
-
-	}
-	*/
 
 	public void KillPlayer(Transform mt)
 	{
