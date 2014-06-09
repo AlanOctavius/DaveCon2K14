@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour {
 	private NetworkStuff NetworkAlive;
 	public Texture Stand;
 	public Texture Duck;
+	public float NormalSpeed = 5;
+	private float SpeedMulti = 1;
+	private int throwable = 1;
 
 	private bool Mine;
 
@@ -43,8 +46,8 @@ public class PlayerController : MonoBehaviour {
 		if (networkView.isMine)
 		{
 			Vector3 moveDir = new Vector3(Input.GetAxis("Horizontal"),Input.GetAxis("Jump") , 0);
-			float speed = 5;
-			Vector3 move = new Vector3(moveDir.x*speed*Time.deltaTime,4*moveDir.y*speed*Time.deltaTime,0);
+			float speed = NormalSpeed*SpeedMulti;
+			Vector3 move = new Vector3(moveDir.x*speed*Time.deltaTime,4*moveDir.y*NormalSpeed*Time.deltaTime,0);
 			transform.Translate(move);
 
 			if (Vector3.Distance(transform.position, lastPosition) > minimumMovement)
@@ -70,6 +73,26 @@ public class PlayerController : MonoBehaviour {
 				renderer.material.SetTexture("_MainTex", Stand);
 			}
 
+			if(Input.GetKey(KeyCode.LeftShift))
+			{
+				SpeedMulti = 2;
+			}
+			else
+			{
+				SpeedMulti = 1;
+			}
+
+			if(Input.GetKeyDown(KeyCode.G))
+			{
+				//check for throwable
+				if(throwable > 0)
+				{
+					//throw
+					throwItem();
+					throwable--;
+				}
+
+			}
 
 		}
 	
@@ -119,7 +142,6 @@ public class PlayerController : MonoBehaviour {
 		{
 			renderer.material.SetTexture("_MainTex", Duck);
 		}
-		//renderer.material.SetTexture("_BumpMap", bumpMap);
 	}
 
 
@@ -140,7 +162,12 @@ public class PlayerController : MonoBehaviour {
 	{
 		rigidbody2D.AddForce (new Vector2 (0, A));
 	}
-	
+
+	private void throwItem()
+	{
+		Debug.Log ("Item Throw");
+	}
+
 	public void Destroy()
 	{
 		Here.gameObject.GetComponent<GameCamera>().SetAlive(false);
