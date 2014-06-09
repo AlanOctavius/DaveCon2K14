@@ -6,11 +6,14 @@ public class PlayerController : MonoBehaviour {
 	private Transform Position;
 	private GameObject Here;
 	private NetworkStuff NetworkAlive;
+	public Texture Stand;
+	public Texture Duck;
 
 	private bool Mine;
 
 	public void Awake()
 	{
+		renderer.material.SetTexture("_MainTex", Stand);
 		if (!networkView.isMine)
 		{
 			enabled = false;
@@ -29,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	// Use this for initialization
 	public void Start () {
-
+		renderer.material.SetTexture("_MainTex", Stand);
 	}
 
 	public Vector3 lastPosition;
@@ -58,11 +61,13 @@ public class PlayerController : MonoBehaviour {
 			{
 				transform.localScale = new Vector3(1,1,1);
 				networkView.RPC("SetDuck", RPCMode.Others, new Vector3(1,1,1));
+				renderer.material.SetTexture("_MainTex", Duck);
 			}
 			else
 			{
 				transform.localScale = new Vector3(1,2,1);
 				networkView.RPC("SetDuck", RPCMode.Others, new Vector3(1,2,1));
+				renderer.material.SetTexture("_MainTex", Stand);
 			}
 
 
@@ -106,6 +111,15 @@ public class PlayerController : MonoBehaviour {
 	public void SetDuck (Vector3 Scale)
 	{
 		transform.localScale = Scale;
+		if(Scale.y == 2)
+		{
+			renderer.material.SetTexture("_MainTex", Stand);
+		}
+		else
+		{
+			renderer.material.SetTexture("_MainTex", Duck);
+		}
+		//renderer.material.SetTexture("_BumpMap", bumpMap);
 	}
 
 
