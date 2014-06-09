@@ -55,6 +55,4 @@ public class NetworkStuff : MonoBehaviour {
 	{
 		myTransform.gameObject.GetComponent<PlayerController> ().Destroy ();
 	}
-
-
 }

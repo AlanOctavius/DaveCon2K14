@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\NetworkContrller.cs" />
      <Compile Include="Assets\Scripts\NetworkInterpolatedTransforms.cs" />
      <Compile Include="Assets\Scripts\NetworkStuff.cs" />
+     <Compile Include="Assets\Scripts\PickUpControl.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\PlayerControlMeta.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
