@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\SpikeControl.cs" />
      <Compile Include="Assets\Scripts\SpringController.cs" />
      <Compile Include="Assets\Scripts\StartPage.cs" />
+     <Compile Include="Assets\Scripts\ThrowableControl.cs" />
      <Compile Include="Assets\Scripts\level generation\dataload.cs" />
      <None Include="Assets\Resources\Level Generation\special areas\ground\g2.txt" />
      <None Include="Assets\Resources\Level Generation\room3.txt" />

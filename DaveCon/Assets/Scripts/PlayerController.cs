@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public float NormalSpeed = 5;
 	private float SpeedMulti = 1;
 	private int throwable = 1;
+	public Transform Throwable;
 
 	private bool Mine;
 
@@ -89,7 +90,7 @@ public class PlayerController : MonoBehaviour {
 				{
 					//throw
 					throwItem();
-					throwable--;
+					//throwable--;
 				}
 
 			}
@@ -166,6 +167,18 @@ public class PlayerController : MonoBehaviour {
 	private void throwItem()
 	{
 		Debug.Log ("Item Throw");
+		Vector3 pz = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		Vector3 pos = transform.position;
+		float X =(pz.x - pos.x);
+		float Y =(pz.y - pos.y);
+		if(X >0)
+		{
+			Network.Instantiate(Throwable,new Vector3(transform.position.x + 1, transform.position.y,0), transform.rotation, 0);
+		}
+		else
+		{
+			Network.Instantiate(Throwable,new Vector3(transform.position.x - 1, transform.position.y,0), transform.rotation, 0);
+		}
 	}
 
 	public void Destroy()
