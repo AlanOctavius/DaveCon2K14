@@ -6,14 +6,19 @@ using System.Text.RegularExpressions;
 
 
 public class dataload : MonoBehaviour {
+	public int number_of_rooms;
+	public int number_of_layers;
+	public int number_of_room_templates;
 
 	// Use this for initialization
 	void Start () {
 		int xstart = 0;
 		int ystart = 0;
-		roombuild (xstart, ystart); //builds a single 8x10 room in the level starting at 0,0
-		roombuild (xstart + 10,ystart);//builds a single 8x10 room in the level starting at 10,0
-
+		for (int nn = 0; nn<number_of_layers; nn++) {
+						for (int n = 0; n<number_of_rooms; n++) {
+								roombuild ((xstart + n * 10), ystart + ((nn - 1) * 8)); //builds a single 8x10 room in the level starting at 0,0
+						}
+				}
 	}
 	
 	// Update is called once per frame
@@ -25,9 +30,12 @@ public class dataload : MonoBehaviour {
 			foreach (GameObject target in gameObjects) {
 				GameObject.Destroy(target);
 			}
-			roombuild (xstart, ystart);
-			roombuild (xstart + 10,ystart);
+			for (int nn = 0; nn<number_of_layers;nn++){
+				for (int n = 0; n<number_of_rooms; n++) {
+						roombuild ((xstart+n*10), ystart + ((nn-1)*8)); //builds a single 8x10 room in the level starting at 0,0
 				}
+			}
+		}
 	
 	}
 
@@ -56,7 +64,7 @@ public class dataload : MonoBehaviour {
 		}
 
 	new string[] dataloader(){
-		int randomroom = UnityEngine.Random.Range (1, 4); //THIS NEESD TO BE CHANGED IF FILES ARE ADDED!!!!!!!
+		int randomroom = UnityEngine.Random.Range (1, number_of_room_templates+1); //THIS NEESD TO BE CHANGED IF FILES ARE ADDED!!!!!!!
 		TextAsset rawdata = (TextAsset)Resources.Load ("Level Generation/room" + randomroom, typeof(TextAsset));
 		string[] mapdata = rawdata.text.Split ('\n');
 		return mapdata;
@@ -70,11 +78,12 @@ public class dataload : MonoBehaviour {
 			string[] mapplot = thedata [n]; //horizontal segment of room data from the dictionary mapdata is asigned to a string
 			for (int nn = 0; nn < Convert.ToInt32 (roomsizedata[0]); nn++) {
 				int ylocation = Convert.ToInt32 (roomsizedata[0]) - n; //(NEEDED TO MIRROR ALONG THE Y axis, otherwise it builds it wrong)
-				if (mapplot [nn] == "1") { //IF there is a "1" in the data string
+				if (mapplot [nn] == "01") { //IF there is a "1" in the data string
 					Instantiate (Resources.Load ("Level Generation/Prefabs/Block"), new Vector3 (nn+xstart, ylocation+ystart, 0), Quaternion.identity); //Create a block at the set position
 				}
 
-				else if (mapplot[nn] == "S"){
+				else if (mapplot[nn] == "SA"){
+					Debug.Log ("Loading special area");
 					loadspecialarea(nn, ylocation,xstart,ystart);
 				}
 			}
@@ -89,7 +98,7 @@ public class dataload : MonoBehaviour {
 						TextAsset rawspecial = (TextAsset)Resources.Load ("Level Generation/special areas/g1", typeof(TextAsset));
 				}*/
 		int randomarea = UnityEngine.Random.Range (1, 3);
-		Debug.Log (randomarea);                                                   //THIS NEESD TO BE CHANGED IF FILES ARE ADDED!!!!!!!
+		//Debug.Log (randomarea);                                                   //THIS NEESD TO BE CHANGED IF FILES ARE ADDED!!!!!!!
 		//int filenumber = DirCount ();
 		TextAsset rawspecial = (TextAsset)Resources.Load ("Level Generation/special areas/ground/g" + randomarea, typeof(TextAsset));
 		string[] splitdata = rawspecial.text.Split ('\n'); //split up the area data
@@ -100,7 +109,7 @@ public class dataload : MonoBehaviour {
 			areadata.Add (n, dictionaryData);
 		}
 		string[] testy = areadata [2];
-		Debug.Log (testy);
+		//Debug.Log (testy);
 
 		buildspecialarea (areadata, xlocation, ylocation,xstart,ystart);
 		//return void;
@@ -111,7 +120,7 @@ public class dataload : MonoBehaviour {
 		for (int nn = yloc; nn > yloc - 3; nn-- ){
 			string[] rowdata = thedata[yloc-nn];
 			for (int n = xloc; n < xloc + 5; n++){
-				if (rowdata [n-xloc] == "1") { //IF there is a "1" in the data string
+				if (rowdata [n-xloc] == "01") { //IF there is a "1" in the data string
 					Instantiate (Resources.Load ("Level Generation/Prefabs/Block"), new Vector3 (n+xstart, nn+ystart, 0), Quaternion.identity); //Create a block at the set position
 				}
 
