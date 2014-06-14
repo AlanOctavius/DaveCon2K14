@@ -1,9 +1,18 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\level generation\dataload.cs">
     <Files>
       <File FileName="Assets\Scripts\level generation\dataload.cs" Line="145" Column="1" />
       <File FileName="Assets\Scripts\level generation\dataload.cs" Line="67" Column="75" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="170" Column="5" />
+      <File FileName="Assets\Scripts\NetworkContrller.cs" Line="16" Column="55" />
+      <File FileName="Assets\Scripts\NetworkStuff.cs" Line="50" Column="28" />
+>>>>>>> 3f4390b42f5342577c7283f5f0ab255785d41984
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

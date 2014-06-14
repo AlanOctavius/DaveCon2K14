@@ -20,9 +20,9 @@ public class NetworkContrller : MonoBehaviour {
 	[RPC]
 	public void sendLevel(string level)
 	{
-		Debug.Log("Load Level: " + currentLevel);
-		levelToLoad = currentLevel;
-
+		Debug.Log("Load Level: " + level);
+		levelToLoad = level;
+		
 		Debug.Log("Load Level: " + levelToLoad);
 		Next = levelToLoad;
 		if(Network.isClient)
@@ -30,6 +30,7 @@ public class NetworkContrller : MonoBehaviour {
 			Network.SetSendingEnabled(0, false);	
 			Network.isMessageQueueRunning = false;
 			Application.LoadLevel ("MAP1");
+			Debug.Log("Loading level client side: " + level);
 			Network.isMessageQueueRunning = true;
 			Network.SetSendingEnabled (0, true);
 		}
