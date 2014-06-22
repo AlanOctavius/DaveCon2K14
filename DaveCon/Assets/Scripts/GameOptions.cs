@@ -34,8 +34,8 @@ public class GameOptions : MonoBehaviour {
 						if(GUILayout.Button("Set"))
 						{
 							Debug.Log("Sending message to Other users");
-							networkView.RPC("SendString",RPCMode.All,LevelToLoad);
-							//SendString(LevelToLoad);
+							networkView.RPC("SendString",RPCMode.OthersBuffered,LevelToLoad);
+
 						}
 					}
 					if(Network.isClient)
@@ -65,11 +65,18 @@ public class GameOptions : MonoBehaviour {
 		
 	}
 
+	void Update()
+	{
+	}
+
+
+
 	public void StartGame()
 	{
 		Debug.Log ("Send message to clients to load level: " + LevelToLoad);
-		networkView.RPC ("sendLevel", RPCMode.All, LevelToLoad);
+		networkView.RPC ("sendLevel", RPCMode.OthersBuffered , LevelToLoad);
 		Next = LevelToLoad;
+		Debug.Log ("Loading Level: " + LevelToLoad);
 		Network.SetSendingEnabled(0, false);	
 		Network.isMessageQueueRunning = false;
 		Application.LoadLevel (Next);
@@ -78,25 +85,43 @@ public class GameOptions : MonoBehaviour {
 		
 	}
 	
-	[RPC]
+/*	[RPC]
 	void sendLevel(string level)
 	{
-		Debug.Log("Load Level: " + LevelToLoad);
 		Next = LevelToLoad;
+		Debug.Log("Load Level: " + LevelToLoad);
 		if(Network.isClient)
 		{
 			Network.SetSendingEnabled(0, false);	
 			Network.isMessageQueueRunning = false;
-			Application.LoadLevel (Next);
+			//Application.LoadLevel (Next);
 			Network.isMessageQueueRunning = true;
 			Network.SetSendingEnabled (0, true);
+		}
+	}*/
+
+	[RPC]
+	public void sendLevel(string level)
+	{
+		//Debug.Log("Load Level: " + level);
+		//Next = level;
+		//Debug.Log("Load Level: " + levelToLoad);
+		//Next = levelToLoad;
+		if(Network.isClient)
+		{
+			//Network.SetSendingEnabled(0, false);	
+			//Network.isMessageQueueRunning = false;
+			Application.LoadLevel ("level");
+			Debug.Log("Loading level client side: " + level);
+			//Network.isMessageQueueRunning = true;
+			//Network.SetSendingEnabled (0, true);
 		}
 	}
 
 	[RPC]
 	void SendString(string msg)
 	{
-		Debug.Log ("Sending Message " + msg);
+		//Debug.Log ("Sending Message " + msg);
 		Next = msg;
 	}
 	
