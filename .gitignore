@@ -41,6 +41,9 @@ DaveCon/Library/metadata/c7/c72a62d8861a8a8489284089d314a3f5
 DaveCon/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
 =======
 *.dll
+*.userprefs
+*.sln
+*.csproj
 >>>>>>> f43c4f6c6d98ea293956df208521a25914638d1f
 DaveCon/DaveCon_Data/output_log.txt
 <<<<<<< HEAD
